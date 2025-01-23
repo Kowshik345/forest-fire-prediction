@@ -1,0 +1,15 @@
+# Import necessary libraries
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+# Load the dataset
+url =
+"https://archive.ics.uci.edu/ml/machine-learning-databases/forest-fi
+res/forestfires.csv"
+forest_fires = pd.read_csv(url)
+# Display the first few rows
+print(forest_fires.head())
+# Basic summary
+print(forest_fires.info())
+print(forest_fires.describe())
