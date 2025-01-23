@@ -1,0 +1,8 @@
+from sklearn.model_selection import train_test_split
+# Features and target
+X = forest_fires.drop(columns=['area', 'fire']) # Drop 'area' and
+'fire' for X
+y = forest_fires['fire'] # Predicting fire occurrence
+# Split into train and test sets
+X_train, X_test, y_train, y_test = train_test_split(X, y,
+test_size=0.3, random_state=42)
