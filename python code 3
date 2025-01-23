@@ -1,0 +1,4 @@
+# Correlation matrix
+plt.figure(figsize=(10,8))
+sns.heatmap(forest_fires.corr(), annot=True, cmap='coolwarm')
+plt.show()
