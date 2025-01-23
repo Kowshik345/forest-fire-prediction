@@ -1,0 +1,21 @@
+# Encode 'month' and 'day' into numerical values using Label
+Encoding
+from sklearn.preprocessing import LabelEncoder
+le_month = LabelEncoder()
+le_day = LabelEncoder()
+forest_fires['month'] =
+le_month.fit_transform(forest_fires['month'])
+forest_fires['day'] = le_day.fit_transform(forest_fires['day'])
+# Check for any missing values
+print(forest_fires.isnull().sum())
+# Normalize the numerical features
+from sklearn.preprocessing import StandardScaler
+scaler = StandardScaler()
+num_cols = ['FFMC', 'DMC', 'DC', 'ISI', 'temp', 'RH', 'wind',
+'rain']
+forest_fires[num_cols] =
+scaler.fit_transform(forest_fires[num_cols])
+# Target variable: Let's assume we predict the likelihood of fire
+based on the area burned
+forest_fires['fire'] = np.where(forest_fires['area'] > 0, 1, 0) # 1
+for fire, 0 for no fire
